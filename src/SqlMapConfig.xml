@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+	<!--如果开发多个模块  建议使用com.ssm  -->
+		<!--package: 扫描整个包里面的类  别名默认是包名下的类名-->
+		<package name="Pojo"/>
+	</typeAliases> 	
+	
+ 	<!-- mappers使用来加载映射文件的 -->
+ 	<!--如果开发多个模块,建议使用com.ssm  -->
+ 	<mappers>
+ 		<package name="dao"></package>
+ 	</mappers>
+
+</configuration>
