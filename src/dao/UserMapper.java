@@ -2,6 +2,8 @@ package dao;
 
 import Pojo.User;
 import Pojo.UserExample;
+import apsara.odps.lot.SelectProtos.Select;
+
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 

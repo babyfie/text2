@@ -30,6 +30,11 @@ public class UserController {
 		@RequestMapping("/regisn")
 		public String resign(User user) throws Exception {
 			userService.addUser(user);
+			return "/login";
+		}
+		
+		@RequestMapping("/toregisn")
+		public String toresign(User user) throws Exception {
 			return "/singup";
 		}
 		
@@ -39,9 +44,13 @@ public class UserController {
 		
 		User user1=userService.login(user);
 		
-		if(user1!=null){
+		boolean email = user.getEmail().equals(user1.getEmail());
+		boolean password = user.getPassword().equals(user1.getPassword());
+		boolean type = user.getType().equals(user1.getType());
+		if(user1!=null &&(email && password && type) ){
+
 			httpSession.setAttribute("user", user1);
-			if(user1.getType().equals("zuke")){
+			if(user1.getType().equals("租客")){
 				return "zuke/main";
 			}
 			else{
@@ -50,7 +59,7 @@ public class UserController {
 		}else{
 			String error="error";
 			model.addAttribute("error", error);
-		return "login";
+			return "login";
 		}
 	}
 	

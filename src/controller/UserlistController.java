@@ -54,9 +54,9 @@ public class UserlistController {
 			model.addAttribute("userlist", list1);
 		}
 		
-	
-		
 		}
+		
+		
 		else{
 			
 			Userlist list=userlistService.finduserlistupdate(userlist);
@@ -93,5 +93,12 @@ public class UserlistController {
 		userlistService.deleteuserlist(id);
 		model.addAttribute("error", "deletesuccess");
 		return "redirect:findalluserlist.action";
+	}
+	
+	//添加用户信息
+	@RequestMapping("/insertuserinfo")
+	public String insert(Model model,Userlist userlist) {
+		userlistService.insertuserlist(userlist);	
+		return "/zuke/my-info";
 	}
 }

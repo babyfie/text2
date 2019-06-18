@@ -20,18 +20,26 @@
       
   </resultMap>
   <insert id="insertapply" parameterType="Pojo.Apply">
-	  insert into apply(house_id,address,price,area,status,userlist_id) 
-	  values(#{house_id},#{address},#{price},#{area},#{status},#{userlist_id})
+	  insert into apply(house_id,address,price,area,status,userlist_id,housename) 
+	  values(#{house_id},#{address},#{price},#{area},#{status},#{userlist_id},#{housename})
+	</insert>
+	
+	<insert id="shoucang" parameterType="Pojo.Apply">
+	  insert into shoucang(house_id,address,price,area,status,userlist_id,housename) 
+	  values(#{house_id},#{address},#{price},#{area},#{status},#{userlist_id},#{housename})
 	</insert>
 	
 	<select id="findapplylist" resultMap="ApplyUserlistResultMap">
 		SELECT
-			a.*,
-			u.*
-		FROM
-			apply a
-		JOIN `userlist` u ON u.id = a.userlist_id
+		a.house_id,a.address,a.area,a.price,u.name,u.idcard,u.phone
+		From 
+		apply a join userlist u where a.userlist_id = u.user_id
 	</select>
+	
+	<select id="myapply" parameterType="string" resultType="Pojo.Apply">
+		select * from apply
+	</select>
+	
 	<select id="findbyhouse_id" parameterType="string" resultType="Pojo.Apply">
 		select * from apply where house_id=#{house_id}
 	</select>

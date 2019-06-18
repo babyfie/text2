@@ -92,7 +92,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                         </select>
                             </div>
                             <div class="form-group mb-0">
-                                <button type="submit" class="btn-md button-theme btn-block">注册</button>
+                                <a onclick="alert('注册成功')"><button type="submit" class="btn-md button-theme btn-block">注册</button></a>
                             </div>
                         </form>
                     </div>
@@ -113,7 +113,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <button type="button" class="close">×</button>
     <form action="index.html#">
         <input type="search" value="" placeholder="type keyword(s) here" />
-        <button type="submit" class="btn btn-sm button-theme">Search</button>
+        <button type="submit" class="btn btn-sm button-theme">搜索</button>
     </form>
 </div>
 

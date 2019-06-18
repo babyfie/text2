@@ -17,6 +17,11 @@
 	<select id="findhetong" parameterType="String" resultType="Pojo.Hetong">
 		select * from hetong where house_id=#{house_id}
 	</select>
+	
+	<select id="findallhetong" resultMap="BaseResultMap">
+		select * from hetong 
+	</select>
+	
 	<insert id="inserthetong" parameterType="Pojo.Hetong">
 	  insert into hetong(house_id,address,payday,price,chuzu,chuzu_idcard,zuke,zuke_idcard,fromdate,todate) 
 	  values(#{house_id},#{address},#{payday},#{price},#{chuzu},#{chuzu_idcard},#{zuke},#{zuke_idcard},#{fromdate},#{todate})

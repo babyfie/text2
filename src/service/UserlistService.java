@@ -15,6 +15,5 @@ public interface UserlistService {
 	public List<Userlist> getmyapply(Integer id);
 	public List<Userlist> getmyapplyout(Integer id);
 	public List<Userlist> findalluserlist();
-
 	public void deleteuserlist(Integer id);
 }

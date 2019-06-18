@@ -1,9 +1,15 @@
 package controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 
 import Pojo.Apply;
 import Pojo.Checkout;
@@ -51,7 +57,7 @@ public class HetongController {
 		//从申请列表中删除
 		applyService.deletebyhouse_id(hetong1.getHouse_id());
 		model.addAttribute("error", "zusuccess");
-		return "redirect:/zulist/findzulist.action";
+		return "insertSuccess";
 		
 	}
 	@RequestMapping("/seehetong")
@@ -100,4 +106,13 @@ public class HetongController {
 		model.addAttribute("mainPage", "showhetong.jsp");
 		return "zuke/main";
 	}
+	
+	@RequestMapping("/findallhetong")
+	public String seeallhetong(Model model) {
+		Hetong hetong = new Hetong();
+		List<Hetong> findallhetong = hetongService.findallhetong();
+		model.addAttribute("hetong", findallhetong);
+		return "zuke/my-contract";
+	}
+	
 }

@@ -15,11 +15,6 @@
     <link rel="stylesheet" type="text/css" href="/text2/css/main.css"/>
     <script type="text/javascript" src="/text2/js/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="/text2/js/libs/modernizr.min.js"></script>
-	</script>
-	<style type="text/css">
-	
-	
-	</style>
 </head>
 <body>
 <div>
@@ -29,7 +24,7 @@
 	<form id="houseForm" name="houseForm"
 		action="ahouselist.action"
 		method=post >
-						 <div class="result-title">
+					<div class="result-title">
                     <div class="result-list">
                       
                         
@@ -43,10 +38,23 @@
 								<tr
 									style="FONT-WEIGHT: bold; FONT-STYLE: normal; BACKGROUND-COLOR: #eeeeee; TEXT-DECORATION: none">
 									<td>房屋id</td>
+									<td>房屋名称</td>
 									<td>地址</td>
 									<td>面积</td>
 									<td>价格</td>
 									<td>状态</td>
+									<td>房屋类型</td>
+									<td>卧室</td>
+									<td>浴室</td>
+									<td>城市</td>
+									<td>详细地址</td>
+									<td>邮编</td>
+									<td>空调</td>
+									<td>洗衣机</td>
+									<td>厨房</td>
+									<td>名称</td>
+									<td>邮箱</td>
+									<td>电话</td>
 									<td>操作</td>
 									
 								</tr>
@@ -55,11 +63,23 @@
 									<tr
 										style="FONT-WEIGHT: normal; FONT-STYLE: normal; BACKGROUND-COLOR: white; TEXT-DECORATION: none">
 										<td>${houselist.houseid }</td>
-
+										<td>${houselist.housename}</td>
 										<td>${houselist.address}</td>
 										<td>${houselist.area}</td>
 										<td>${houselist.price}</td>
 										<td>${houselist.status}</td>
+										<td>${houselist.type }</td>
+										<td>${houselist.bedroom}</td>
+										<td>${houselist.bashroom}</td>
+										<td>${houselist.city }</td>
+										<td>${houselist.detail}</td>
+										<td>${houselist.poast}</td>
+										<td>${houselist.isair}</td>
+										<td>${houselist.iswashing}</td>
+										<td>${houselist.iskitchen}</td>
+										<td>${houselist.name}</td>
+										<td>${houselist.email}</td>
+										<td>${houselist.phone}</td>
 										<td><a class="link-update"
 											href="findid.action?id=${houselist.id}">修改</a>
 											&nbsp;&nbsp; 
@@ -78,7 +98,7 @@
 						</div>
 					
 
-						<tr>
+						
 						<tr>
 							<span id=pagelink>
 								<div style="LINE-HEIGHT: 20px; HEIGHT: 20px; TEXT-ALIGN: right; margin-top:10px">
@@ -100,13 +120,7 @@
 							</span>
 						
 						</tr>
-						</tbody>
-					
-					
-
-					
-						</tbody>
-				
+						
 
 					</form>
 </div>

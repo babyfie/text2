@@ -2,6 +2,7 @@ package Pojo;
 
 public class Apply {
 private Integer id;
+private String housename;
 private String house_id;
 private String address;
 private double area;
@@ -9,6 +10,13 @@ private double price;
 private Integer userlist_id;
 private String status;
 private Userlist userlist;
+
+public String getHousename() {
+	return housename;
+}
+public void setHousename(String housename) {
+	this.housename = housename;
+}
 public Userlist getUserlist() {
 	return userlist;
 }

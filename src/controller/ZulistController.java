@@ -23,7 +23,6 @@ import service.UserlistService;
 import service.ZulistService;
 
 @Controller
-@RequestMapping("/zulist")
 public class ZulistController {
 	@Autowired
 	private ZulistService zulistService;

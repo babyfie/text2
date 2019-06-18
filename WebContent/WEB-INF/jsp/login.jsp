@@ -75,9 +75,9 @@
                         <!-- Name -->
                         <h3>登录你的账户</h3>
                         <!-- Form start -->
-                        <form id="loginform" action="logincheck.action" method="POST">
+                        <form class="form" id="loginform" action="logincheck.action" method="POST">
                             <div class="form-group">
-                                <input type="email" name="email" class="input-text" placeholder="邮箱/电话">
+                                <input type="email" name="email" class="input-text" placeholder="输入邮箱">
                             </div>
                             <div class="form-group">
                                 <input type="password" name="Password" class="input-text" placeholder="密码">
@@ -85,11 +85,11 @@
                             
                             <div class="form-group">
                             	<label class="radio inline" style="font-size: 15px">
-      	  							<input id="admin" type="radio" name="type" value="admin"  checked/> 管理员
+      	  							<input id="admin" type="radio" name="type" value="管理员"  checked/> 管理员
 								</label>
 							
 								<label class="radio inline" style="font-size:15px">
-									<input id="zuke" type="radio" name="type" value="zuke" /> 租客
+									<input id="zuke" type="radio" name="type" value="租客" /> 租客
 								</label>
                             </div>
                             
@@ -104,14 +104,14 @@
                                 <div class="clearfix"></div>
                             </div>
                             <div class="form-group mb-0">
-                                <button type="submit" class="btn-md button-theme btn-block">登录</button>
+                                <button id="login-button" type="submit" class="btn-md button-theme btn-block">登录</button>
                             </div>
 						</form>
                        
                     </div>
                     <!-- Footer -->
                     <div class="footer">
-                        <span>没有账号？ <a href="/text2/regisn.action">点击注册</a></span>
+                        <span>没有账号？ <a href="/text2/toregisn.action">点击注册</a></span>
                     </div>
                 </div>
                 <!-- Form content box end -->
@@ -156,35 +156,32 @@
 <!-- Custom javascript -->
 <script  src="js/ie10-viewport-bug-workaround.js"></script>
 
-
-	  
-	<%--$().ready(function() {
+<script type="text/javascript">
+	 $().ready(function() {
         // 在键盘按下并释放及提交后验证提交表单
         $("#loginform").validate({
-        	/*success:function(){
-             //label.text('').addClass('valid');
+        	success:function(){
+             label.text('').addClass('valid');
             $('#login-button').click(function(event){
 			event.preventDefault();
 			$('form').fadeOut(500);
-			$('.wrapper').addClass('form-success');
+			$('.container').addClass('form-success');
 
 		});
 
-        },*/
+        },
             rules : {
-                username : {
+                email : {
                     required : true,
                 },
                
                 password : {
-                    required : true,
-                  
-                },
-                
+                    required : true,       
+                }, 
             },
             messages : {
-                username : {
-                    required : "请输入用户名",
+                email : {
+                    required : "请输入邮箱",
                 },
                
                 password : {
@@ -201,9 +198,9 @@ if(error=="error"){
 
 alert("帐户名或密码错误");
 }
- --%>
 
 
 
+</script>
 </body>
 </html>

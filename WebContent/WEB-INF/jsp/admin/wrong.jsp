@@ -74,7 +74,7 @@
 										<td>${wrong.status}</td>
 										<td><a class="link-update"
 											href="/text2/wrong/gotosolve.action?id=${wrong.id }" 
-											onclick="return window.confirm('确定你已处理此报障？')">已处理</a>
+											onclick="return window.confirm('确定你已处理此报障？')">待处理</a>
 											&nbsp;&nbsp; 
 											
 											

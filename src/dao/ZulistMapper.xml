@@ -45,7 +45,7 @@
 			u.*
 		FROM
 			zulist z
-		JOIN `userlist` u ON u.id = z.userlist_id
+		JOIN userlist u ON u.id = z.userlist_id
 	</select>
 	<select id="findzulist" resultType="Pojo.Zulist" parameterType="String">
 		SELECT * FROM

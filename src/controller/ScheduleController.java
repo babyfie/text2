@@ -23,7 +23,7 @@ public class ScheduleController {
 //查看日程
 	@RequestMapping("/selectAll")
 	public String selectAll(Model model ,@RequestParam(required=false,defaultValue="1") Integer page,
-            @RequestParam(required=false,defaultValue="2") Integer pageSize){
+            @RequestParam(required=false,defaultValue="5") Integer pageSize){
 		 PageHelper.startPage(page, pageSize);
 		List<Schedule> schedule=scheduleService.selectAll();
 		PageInfo<Schedule> p=new PageInfo<Schedule>(schedule);
@@ -53,13 +53,25 @@ public class ScheduleController {
 		return "admin/main1";
 		
 	}
+	
 	@RequestMapping("/toinsert")
-	public String toinsert(Model model){
+	public String toinsert(Model model,Schedule schedule){
+		scheduleService.insertschedule(schedule);
 		model.addAttribute("mainPage", "addschedule.jsp");
 		
 		return "admin/main1";
 		
 	}
+	
+	@RequestMapping("/toshow")
+	public String toshow(Model model){
+		model.addAttribute("mainPage", "addschedule.jsp");
+		return "admin/main1";
+		
+	}
+	
+	
+	
 	@RequestMapping("/toupdate")
 	public String toupdate(Model model,Integer id){
 		Schedule schedule=scheduleService.selectbyid(id);

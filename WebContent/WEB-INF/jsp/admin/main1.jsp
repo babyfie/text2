@@ -55,7 +55,7 @@
         </div>
         <div class="top-info-wrap">
             <ul class="top-info-list clearfix">
-                <li>欢迎您，${sessionScope.user.username}！</li>
+                <li>欢迎您，${sessionScope.user.username}</li>
                 
                 <li><a href="javascript:if(confirm('确实要退出登录吗?'))location='/text2/login.action'">退出</a></li>
             </ul>
@@ -73,7 +73,7 @@
                     <a class="a"><i class="icon-font">&#xe003;</i>房源信息</a>
                     <div class="p"><ul class="sub-menu">
                         <li><a href="/text2/ahouselist.action"><i class="icon-font">&#xe008;</i>房源列表</a></li>
-                         <li><a href="/text2/toaddhouse.action"><i class="icon-font">&#xe008;</i>添加房源</a></li>
+                         <li><a href="/text2/toaddhousePage.action"><i class="icon-font">&#xe008;</i>添加房源</a></li>
        
                     </ul>
                     </div>
@@ -81,7 +81,7 @@
                 <li>
                     <a class="a"><i class="icon-font">&#xe018;</i>租赁及合同信息</a>
              <div class="p">         <ul class="sub-menu">
-                        <li><a href="/text2/zulist/findzulist.action"><i class="icon-font">&#xe017;</i>在租列表</a></li>
+                        <li><a href="/text2/findzulist.action"><i class="icon-font">&#xe017;</i>在租列表</a></li>
                       
                         <li><a href="/text2/checkout/getallcheckout.action"><i class="icon-font">&#xe037;</i>已退租列表</a></li>
                         
@@ -120,7 +120,7 @@
                     <a class="a"><i class="icon-font">&#xe018;</i>我的日程</a>
             <div class="p">          <ul class="sub-menu">
                         <li><a href="/text2/schedule/selectAll.action"><i class="icon-font">&#xe017;</i>查看日程</a></li>
-                       	<li><a href="/text2/schedule/toinsert.action"><i class="icon-font">&#xe017;</i>添加日程</a></li>
+                       	<li><a href="/text2/schedule/toshow.action"><i class="icon-font">&#xe017;</i>添加日程</a></li>
                         
                     </ul>
                      </div>
@@ -149,7 +149,5 @@
         </div>
         
     </div>
-    <!--/main-->
-</div>
 </body>
 </html>

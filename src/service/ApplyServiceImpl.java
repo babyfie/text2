@@ -50,9 +50,17 @@ public class ApplyServiceImpl implements ApplyService {
 		houselistMapper.updatestatus(houselist);
 		applyMapper.deletebyhouse_id(houselist.getHouseid());
 	}
-	
-	
-	
-	
 
+	@Override
+	public List<Apply> myapply() throws Exception {
+		List<Apply> myapply = applyMapper.myapply();
+		return myapply;
+	}
+
+	@Override
+	public void shoucang(Apply apply) {
+		// TODO Auto-generated method stub
+		applyMapper.shoucang(apply);
+	}
+	
 }

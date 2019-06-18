@@ -12,9 +12,8 @@
    select *
     from houselist
     <where>
-		
 		<if test="houseid!=null and houseid!=''">
-		and username=#{houseid}
+		and houseid=#{houseid}
 		</if>
 		<if test="address!=null and address!=''">
 		and address=#{address}
@@ -28,9 +27,66 @@
 		<if test="status!=null and status!=''">
 		and status=#{status}
 		</if>
+		<if test="type!=null and type!=''">
+		and type =${type}
+		</if>
+		<if test="bedroom!=null and bedroom!=''">
+		and bedroom =${bedroom}
+		</if>
+		<if test="bashroom!=null and bashroom!=''">
+		and bashroom =${bashroom}
+		</if>
+		<if test="city!=null and city!=''">
+		and city =${city}
+		</if>
 		</where>
-		
+	
   </select>
+  
+  
+  <select id="selectAllCondition" resultMap="BaseResultMap" parameterType="Pojo.Houselist">
+   select *
+    from houselist
+    <where>
+		<if test="houseid!=null and houseid!=''">
+		and houseid=#{houseid}
+		</if>
+		<if test="address!=null and address!=''">
+		and address=#{address}
+		</if>
+		<if test="area!=null and area!=''">
+		and area=#{area}
+		</if>
+		<if test="price!=null and price!=''">
+		and price=#{price}
+		</if>
+		<if test="status!=null and status!=''">
+		and status=#{status}
+		</if>
+		<if test="type!=null and type!=''">
+		and type =${type}
+		</if>
+		<if test="bedroom!=null and bedroom!=''">
+		and bedroom =${bedroom}
+		</if>
+		<if test="bashroom!=null and bashroom!=''">
+		and bashroom =${bashroom}
+		</if>
+		<if test="city!=null and city!=''">
+		and city =${city}
+		</if>
+		</where>
+	
+  </select>
+  
+  
+  <select id="selectcondition" resultMap="BaseResultMap">
+  	select * from houselist 
+  	where 
+  	status=#{status} and type=${type} and bedroom =${bedroom} and bashroom =${bashroom} and city =${city}
+  </select>
+  
+  
   <select id="findhouselistByVoCount" parameterType="Pojo.QueryVo" resultType="int">
 		select count(*)
 		from houselist
@@ -53,6 +109,7 @@
 		</if>
 		</where>
 	</select>
+	
 	<select id="findid" parameterType="Integer" resultType="Pojo.Houselist">
 		select * from houselist where id=#{id}
 	</select>
@@ -62,11 +119,14 @@
 	<select id="findhouseidupdate" parameterType="Pojo.Houselist" resultType="Pojo.Houselist">
 		select * from houselist where houseid=#{houseid} and id!=#{id}
 	</select>
+	
 	<update id="updatehouse" parameterType="Pojo.Houselist">
-		update houselist set houseid=#{houseid},address=#{address},area=#{area},price=#{price},status=#{status}
+		update houselist set houseid=#{houseid},address=#{address},area=#{area},price=#{price},status=#{status},bedroom=#{bedroom},bashroom=#{bashroom},poast=#{poast},detail=#{detail},name=#{name},email=#{email},
+		phone=#{phone},iswashing=#{iswashing},iskitchen=#{iskitchen},housename=#{housename},type=#{type},city=#{city}
 		where id=#{id}
-</update>
-<update id="updatehousestatus" parameterType="Pojo.Houselist">
+	</update>
+	
+	<update id="updatehousestatus" parameterType="Pojo.Houselist">
 		update houselist set status=#{status}
 		where id=#{id}
 </update>
@@ -76,13 +136,14 @@
 </update>
 	
 	<insert id="inserthouse" parameterType="Pojo.Houselist">
-	  insert into houselist(houseid,address,area,price,status) 
-	  values(#{houseid},#{address},#{area},#{price},#{status})
+	  insert into houselist(houseid,address,area,price,status,bedroom,bashroom,poast,detail,isair,name,email,phone,iswashing,iskitchen,housename,type,city) 
+	  values(#{houseid},#{address},#{area},#{price},#{status},#{bedroom},#{bashroom},#{poast},#{detail},#{isair},#{name},#{email},#{phone},#{iswashing},#{iskitchen},#{housename},#{type},#{city})
 	</insert>
-	
+	 
 	<delete id="deletehouse" parameterType="Integer" >
 		delete from houselist where id=#{id}
 	</delete>
+	
 	<delete id="deletehousebyhouseid" parameterType="String" >
 		delete from houselist where houseid=#{houseid}
 	</delete>

@@ -142,7 +142,7 @@
 </div>
 <div class="result-content">
 <div class="sidebar-title">
-        <form action="/text2/hetong/inserthetong.action" method="post" id="myform" name="myform" enctype="multipart/form-data" >
+        <form action="hetong/inserthetong.action" method="post" id="myform" name="myform" >
                     <table class="insert-tab" width="100%">
                         <tbody>
                                 <th><i class="require-red">*</i>房屋id：</th>
@@ -189,8 +189,8 @@
 								<tr>
                                 <th></th>
                                 <td>
-                                    <input class="btn btn-primary btn6 mr10" value="提交" type="submit">
-                                    <input class="btn btn6" onclick="history.go(-1)" value="返回" type="button">
+                                   <button class="btn btn-primary btn6 mr10" type="submit">提交</button>
+                                    <button class="btn btn6" onclick="history.go(-1)"  >返回</button>
                                 </td>
                             </tr>
 							<tr>

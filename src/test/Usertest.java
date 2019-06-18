@@ -1,6 +1,9 @@
 package test;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -51,4 +54,5 @@ private ApplicationContext applicatonContext;
 		List<User> list = userMapper.selectByExample(userExample);
 		System.out.println(list);
 	}
+	
 }

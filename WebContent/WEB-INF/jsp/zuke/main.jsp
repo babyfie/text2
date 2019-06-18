@@ -60,7 +60,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <header class="main-header header-transparent sticky-header">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand logo" href="index.html">
+            <a class="navbar-brand logo" href="#">
                 <img src="img/logos/black-logo.png" alt="logo">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -88,23 +88,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                     <li><a class="dropdown-item" href="properties-map-leftside-grid.html"></a></li>
                                     <li><a class="dropdown-item" href="properties-map-full.html"></a></li>
                                 </ul>
-                            </li>
-                            <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#"></a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="properties-details.html"></a></li>
-                                    <li><a class="dropdown-item" href="properties-details-2.html"></a></li>
-                                </ul>
-                            </li>
+                            </li> 
                         </ul>
                     </li>
-
+ 					
+ 					<li class="nav-item dropdown megamenu-li" >
+                        <a href="/text2/login.action" class="nav-link">欢迎您，${sessionScope.user.username}</a>
+                    </li>
+                    
+                    <li class="nav-item dropdown megamenu-li" >
+                    	<a href="javascript:if(confirm('确实要退出登录吗?'))location='/text2/index.jsp'" class="nav-link">退出</a>
+                    </li>
+                    
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="my-properties.html">
+                        <a class="nav-link dropdown-toggle" href="/text2/myapply.action">
                             我的账户
                         </a>
-                    </li>
-                    <li class="nav-item sp">
-                        <a href="submit-property.html" class="nav-link link-color"><i class="fa fa-plus"></i> 发布房源</a>
                     </li>
                 </ul>
             </div>
@@ -162,18 +161,27 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                             <option>4</option>
                                         </select>
                                     </div>
-                                    <div class="col-xl-2 col-lg-2 col-sm-4 col-6 search-col">
+                                   <div class="col-xl-2 col-lg-2 col-sm-4 col-6 search-col">
                                         <select class="selectpicker search-fields" name="location">
                                             <option>地点</option>
-                                            <option>美国</option>
-                                            <option>墨西哥</option>
-                                            <option>比利时</option>
-                                            <option>加拿大</option>
+                                            <option>常州</option>
+ 											<option>徐州</option>
+ 											<option>南京</option>
+ 											<option>淮安</option>
+ 											<option>南通</option>
+ 											<option>宿迁</option>
+ 											<option>无锡</option>
+											<option>扬州</option>
+											<option>盐城</option>
+											<option>苏州</option>
+											<option>泰州</option>
+											<option>镇江</option>
+											<option>连云港</option>
                                         </select>
                                     </div>
                                     <div class="col-xl-2 col-lg-2 col-sm-4 col-6 search-col">
                                         <button class="btn button-theme btn-search btn-block">
-                                            <a href="properties-list-leftsidebar.html" class="nav-link"><i class="fa fa-search"></i><strong>查询</strong></a>
+                                            <a href="/text2/userhouse.action" class="nav-link"><i class="fa fa-search"></i><strong>查询</strong></a>
                                         </button>
                                     </div>
                                 </div>
@@ -230,15 +238,24 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                     <div class="col-xl-2 col-lg-2 col-sm-4 col-6 search-col">
                                         <select class="selectpicker search-fields" name="location">
                                             <option>地点</option>
- 											<option>美国</option>
- 											<option>墨西哥</option>
- 											<option>比利时</option>
- 											<option>加拿大</option>
+ 											<option>常州</option>
+ 											<option>徐州</option>
+ 											<option>南京</option>
+ 											<option>淮安</option>
+ 											<option>南通</option>
+ 											<option>宿迁</option>
+ 											<option>无锡</option>
+											<option>扬州</option>
+											<option>盐城</option>
+											<option>苏州</option>
+											<option>泰州</option>
+											<option>镇江</option>
+											<option>连云港</option>
                                         </select>
                                     </div>
                                     <div class="col-xl-2 col-lg-2 col-sm-4 col-6 search-col">
                                         <button class="btn button-theme btn-search btn-block">
-                                            <a href="properties-list-leftsidebar.html" class="nav-link"><i class="fa fa-search"></i><strong>查询</strong></a>
+                                            <a href="/text2/userhouse.action" class="nav-link"><i class="fa fa-search"></i><strong>查询</strong></a>
                                         </button>
                                     </div>
                                 </div>
@@ -295,15 +312,24 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                     <div class="col-xl-2 col-lg-2 col-sm-4 col-6 search-col">
                                         <select class="selectpicker search-fields" name="location">
                                             <option>地点</option>
-                                            <option>美国</option>
-                                            <option>墨西哥</option>
-                                            <option>比利时</option>
-                                            <option>加拿大</option>
+                                            <option>常州</option>
+ 											<option>徐州</option>
+ 											<option>南京</option>
+ 											<option>淮安</option>
+ 											<option>南通</option>
+ 											<option>宿迁</option>
+ 											<option>无锡</option>
+											<option>扬州</option>
+											<option>盐城</option>
+											<option>苏州</option>
+											<option>泰州</option>
+											<option>镇江</option>
+											<option>连云港</option>
                                         </select>
                                     </div>
                                     <div class="col-xl-2 col-lg-2 col-sm-4 col-6 search-col">
                                         <button class="btn button-theme btn-search btn-block">
-                                             <a href="properties-list-leftsidebar.html" class="nav-link"><i class="fa fa-search"></i><strong>查询</strong></a>
+                                             <a href="/text2/userhouse.action" class="nav-link"><i class="fa fa-search"></i><strong>查询</strong></a>
                                         </button>
                                     </div>
                                 </div>
@@ -326,7 +352,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     </div>
     <div class="container search-options-btn-area">
         <a class="search-options-btn d-lg-none d-xl-none">
-            <div class="search-options d-none d-xl-block d-lg-block">Search Options</div>
+            <div class="search-options d-none d-xl-block d-lg-block">搜索选项</div>
             <div class="icon"><i class="fa fa-chevron-up"></i></div>
         </a>
     </div>
@@ -387,16 +413,25 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                                 <div class="form-group">
                                     <select class="selectpicker search-fields" name="location">
                                         <option>地点</option>
-                                        <option>美国</option>
-                                        <option>墨西哥</option>
-                                        <option>比利时</option>
-                                        <option>加拿大</option>
+                                        <option>常州</option>
+ 										<option>徐州</option>
+ 										<option>南京</option>
+ 										<option>淮安</option>
+ 										<option>南通</option>
+ 										<option>宿迁</option>
+ 										<option>无锡</option>
+										<option>扬州</option>
+										<option>盐城</option>
+										<option>苏州</option>
+										<option>泰州</option>
+										<option>镇江</option>
+										<option>连云港</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-6 col-6">
                                 <div class="form-group">
-                                    <button class="search-button">Search</button>
+                                    <button class="search-button">查询</button>
                                 </div>
                             </div>
                         </div>
@@ -433,5 +468,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <script  src="js/ie10-viewport-bug-workaround.js"></script>
 <!-- Custom javascript -->
 <script  src="js/ie10-viewport-bug-workaround.js"></script>
+
+<script type="text/javascript">
+$('.selectpicker').selectpicker({
+	noneSelectedText: '',
+    noneResultsText: '',
+    liveSearch: true,
+    size:20   //设置select高度，同时显示20个值
+});
+</script>
+
 </body>
 </html>

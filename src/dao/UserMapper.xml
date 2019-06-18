@@ -85,20 +85,16 @@
   </select>
   <select id="selectByUser" resultType="Pojo.User" parameterType="Pojo.User" >
     select *
-    from user
-    <where>
-		<!--如果邮箱不为空  -->
-		<if test="email!=null and email!=''">
-		and email=#{email}
-		</if>
-		<if test="password!=null and password!=''">
+     from user
+     <where>
+     	<if test="email!=null and email!=''">
+     	and email=#{email}
+     	</if>
+     	<if test="password!=null and password!=''">
 		and password=#{password}
 		</if>
-		<if test="type!=null and type!=''">
-		and type=#{type}
-		</if>
-		</where>
-
+     </where>
+    <!--   where email = #{email} and password = #{password} -->
   </select>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 

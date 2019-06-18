@@ -59,7 +59,6 @@
 									<tr
 										style="FONT-WEIGHT: normal; FONT-STYLE: normal; BACKGROUND-COLOR: white; TEXT-DECORATION: none">
 										<td>${apply.house_id }</td>
-
 										<td>${apply.address}</td>
 										<td>${apply.area}</td>
 										<td>${apply.price}</td>
@@ -68,7 +67,7 @@
 										<td>${apply.userlist.phone}</td>
 										<td>
 										<a class="link-update"
-											href="/text2/zulist/toaddhetong.action?house_id=${apply.house_id}">同意租赁</a>
+											href="/text2/toaddhetong.action?house_id=${apply.house_id}">同意租赁</a>
 											&nbsp;&nbsp; 
 											<input type="hidden" name="id" value="${houselist.id}"/>
 											<a class="link-del"

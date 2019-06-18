@@ -99,7 +99,7 @@
 	u.*, ul.*
 FROM
 	`user` u
-, userlist ul where u.id = ul.user_id and u.type='zuke'
+, userlist ul where u.id = ul.user_id and u.type='租客'
 	</select>
  	<select id="findhasuserlist" parameterType="Integer" resultType="Pojo.Userlist">
 		select * from userlist where user_id=#{user_id}

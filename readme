@@ -1,28 +1,16 @@
 访问网站  http://localhost:8080/text2/login.action
 
-该网站出现404问题:1. 网址中没有输入.action,找不到
-			   2.404一般都是web.xml配置文件的问题
-			   3.没写项目名称
-			   4.服务器被stop了
-	
-	尽量不要使用Chrome浏览器进行登录,容易出Bug
+下载项目放到自己的eclipse中就可以运行
 
-需求:1.将管理员和租客的每个功能都尽量添加一条数据,然后显示在后端
-	
-	2.没有注册功能,添加一个注册功能
-		登录、注册功能使用前端页面的登录注册功能
-		同时要注意到登录界面的租客和管理员两个不同的登录用户
-			
-	3.添加保障页面    http://localhost:8080/text2/wrong/addwrong.action
-		添加保障按钮没有
-		添加保障的参数不知道怎么传
-		建议调试一下
-	
-	4.添加合同页面    http://localhost:8080/text2/zulist/toaddhetong.action?house_id=c10
-		添加合同按钮没有
-		添加合同输入参数提交之后,报500,  java.lang.NullPointerException
-		建议调试之后查看参数列表
-		
-	5.解决上述问题之后,准备好将前端页面与后台系统进行合并  
-	
+运行环境：
+JDK1.8  
+Tomcat 8.5
+
+项目如果出现jar包错误，可以自行在Maven上下载并加载到eclipse中即可
+
+ 
+
+
+
+
 	
